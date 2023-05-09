@@ -1,4 +1,4 @@
-# ICLR'23 ManyDG Paper
+# ManyDG
 - ManyDG: Many-domain Generalization for Healthcare Applications
 - Data, Processing Scripts, Baselines and Model Codes
 > 4-minute explanation video is provided in [YouTube]
@@ -45,18 +45,37 @@ https://youtu.be/rbTBajnZV5U
     - **utils_sleep.py**: This file provides the data split and loading files.
 
 ## 2. How to run the code
+
+- 
+- For sleep staging
+``` python
+cd ./ManyDG
+python data/sleep/sleep_edf_process.py
+python run_sleep/run_sleep.py --model [MODEL] --cuda [WHICH GPU] --N_pat [N_OF_PAT] --epochs [EPOCHS]
+
+usage: sleep_edf_process.py [-h] --model MODEL [--cuda CUDA] [--N_pat N_PAT] [--dataset DATASET] [--MLDG_threshold MLDG_THRESHOLD]
+               [--epochs EPOCHS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         choose from base, dev, condadv, DANN, IRM, SagNet, PCL, MLDG
+  --cuda CUDA           which cuda
+  --N_pat N_PAT         number of patients
+  --dataset DATASET     dataset name
+  --MLDG_threshold MLDG_THRESHOLD
+                        threshold for MLDG
+  --epochs EPOCHS       N of epochs
+```
+
+
 - for seizure detection
 ``` python
 cd ./ManyDG
 # obtain the Seizure data first
 python run_seizure/run_seizure.py --model [MODEL] --cuda [WHICH GPU] --N_vote [DEFAULT 5] --N_pat [N_OF_PAT] --epochs [EPOCHS]
+
 ```
-- for sleep staging
-``` python
-cd ./ManyDG
-python data/sleep/sleep_edf_process.py
-python run_sleep/run_sleep.py --model [MODEL] --cuda [WHICH GPU] --N_pat [N_OF_PAT] --epochs [EPOCHS]
-```
+
 - for drug recommendation
 ``` python
 cd ./ManyDG
