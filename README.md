@@ -45,8 +45,7 @@ https://youtu.be/rbTBajnZV5U
     - **utils_sleep.py**: This file provides the data split and loading files.
 
 ## 2. How to run the code
-
-- 
+ 
 - For sleep staging
 ``` python
 cd ./ManyDG
