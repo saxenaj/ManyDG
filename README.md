@@ -9,8 +9,6 @@ https://youtu.be/rbTBajnZV5U
     - ```drugrec/```
         - this is the folder stores data for drug recommendation task
         - **data_process.py**: this file is used for processing MIMIC-III data for the task
-        - before running the scripts, please refer to https://physionet.org/content/mimiciii/1.4/ for downloading the latest version of MIMIC data
-        - refer to https://github.com/sjy1203/GAMENet and https://github.com/ycq091044/SafeDrug for trouble shooting
     - ```Seizure/```
     - ```sleep/```
         - this is the data folder for the processed sample-based Sleep-EDF cassette portion.
@@ -20,7 +18,6 @@ https://youtu.be/rbTBajnZV5U
         - this is the folder for the processed eICU data
         - **eICU_process_step1.py**: the first processing step of eICU data
         - **eICU_process_step2.py**: the second processing step of eICU data
-        - for downloading eICU data, please refer to https://eicu-crd.mit.edu/
     - ```idxFile/```
         - this folder stores the code mapping of different event types in eICU dataset. They will be generated from **eICU_process_step1.py** and **eICU_process_step2.py**. They are used to assign feature dimensions for hospitalization prediction task
 - ```log/```, ```pre-trained/```
